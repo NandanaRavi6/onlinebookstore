@@ -3,15 +3,5 @@ version: '3.1'
 services:
   onlinebook:
     image: 562564084845.dkr.ecr.us-east-2.amazonaws.com/onlinebookstore:latest
-    restart: always
     ports:
-      - 8080:8080
-    deploy:
-      replicas: 2
-      update_config:
-        parallelism: 1
-        delay: 20s
-      restart_policy:
-        condition: on-failure
-        delay: 10s
-        max_attempts: 5
+      - 9090:8080
