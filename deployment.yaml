@@ -4,10 +4,14 @@ metadata:
   name: onlinebookdep
   namespace: firstns
 spec:
+  revisionHistoryLimit: 10
   replicas: 2
-  revisionHistoryLimit: 5
   strategy:
-    type: Recreate
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 50%
+      maxSurge: 50%
+  minReadySeconds: 30
   selector:
     matchLabels:
       app: book
