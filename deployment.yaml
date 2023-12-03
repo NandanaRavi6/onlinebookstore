@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: onlinecont
-        image: nanddockerhub/onlinede:ImageTag
+        image: nanddockerhub/onlinede:Image_Tag
         ports:
         - containerPort: 8080
 ---
