@@ -7,11 +7,7 @@ spec:
   replicas: 2
   revisionHistoryLimit: 5
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 50%
-      maxSurge: 50%
-  minReadySeconds: 30
+    type: Recreate
   selector:
     matchLabels:
       app: book
